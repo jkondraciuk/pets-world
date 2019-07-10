@@ -14,9 +14,9 @@
 I made this project because I wanted to create a web application with Vue.js and Bootstrap that is nice in terms of design and code. The site is RWD
 
 ## Screenshots
-![Example screenshot](./screenshots/home.png)
-![Example screenshot](./screenshots/saved.png)
-![Example screenshot](./screenshots/about.png)
+![Home page](./screenshots/home.png)
+![Saved page](./screenshots/saved.png)
+![About page](./screenshots/about.png)
 
 ## Technologies
 * Vue.js - version 2.6.10
