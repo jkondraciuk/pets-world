@@ -1,12 +1,17 @@
 <template>
     <div class="saved-wrapper">
-        Saved
+        <SavedImages />
     </div>
 </template>
 
 <script>
+import SavedImages from '@/components/SavedImages/SavedImages';
+
 export default {
-    name: 'Saved'
+    name: 'Saved',
+    components: {
+        SavedImages
+    }
 }
 </script>
 

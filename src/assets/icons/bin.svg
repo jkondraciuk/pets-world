@@ -1,0 +1,17 @@
+<svg width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+
+ <title/>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect stroke-width="2px" stroke-linejoin="round" stroke="#4c4c4c" fill="none" id="svg_1" y="5" x="5" width="22" height="26" class="cls-1"/>
+  <line stroke-width="2px" stroke-linejoin="round" stroke="#4c4c4c" fill="none" id="svg_2" y2="4.872685" y1="4.872685" x2="30.127315" x1="2.127315" class="cls-1"/>
+  <polyline stroke-width="2px" stroke-linejoin="round" stroke="#4c4c4c" fill="none" id="svg_3" points="13.127314671874046,4.872685328125954 13.127314671874046,0.8726853281259537 19.127314671874046,0.8726853281259537 19.127314671874046,4.872685328125954 " class="cls-1"/>
+  <line stroke-width="2px" stroke-linejoin="round" stroke="#4c4c4c" fill="none" id="svg_4" y2="27" y1="9" x2="16" x1="16" class="cls-1"/>
+  <line stroke-width="2px" stroke-linejoin="round" stroke="#4c4c4c" fill="none" id="svg_5" y2="26.872685" y1="8.872685" x2="21.127315" x1="21.127315" class="cls-1"/>
+  <line stroke-width="2px" stroke-linejoin="round" stroke="#4c4c4c" fill="none" id="svg_6" y2="27" y1="9" x2="10" x1="10" class="cls-1"/>
+ </g>
+</svg>
