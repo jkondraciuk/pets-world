@@ -1,6 +1,5 @@
 <template>
     <div class="home-wrapper">
-        Hello World!
     </div>
 </template>
 
