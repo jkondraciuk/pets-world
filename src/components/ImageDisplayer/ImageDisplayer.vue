@@ -16,12 +16,15 @@
                         @click="loadImage">Next one</button>
             </div>
         </div>
+        <div style="font-size: 100px">{{ getText }}</div>
     </div>
 </template>
 
 <script>
 import axios from 'axios';
 import ImageType from '@/components/ImageType/ImageType';
+
+import { mapGetters } from 'vuex';
 
 const dogsAPI = 'https://dog.ceo/api/breeds/image/random';
 
@@ -50,7 +53,8 @@ export default {
     computed: {
         style () {
             return `background-image: url(${this.imageURL})`;
-        }
+        },
+        ...mapGetters(['getText'])
     },
     mounted () {
         this.loadImage();

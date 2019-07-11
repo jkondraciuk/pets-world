@@ -7,6 +7,7 @@
 
 <script>
 import Navbar from '@/components/Navbar/Navbar';
+
 export default {
   name: 'App',
   components: {
