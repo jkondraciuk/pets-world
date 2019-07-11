@@ -1,0 +1,26 @@
+.imgd-wrapper {
+    &__type {
+        width: 85vw;
+        margin: auto;
+    }
+}
+
+.imgd {
+    width: 85vw;
+    margin: auto;
+    padding: 25px;
+    border: 1px solid $grey-4;
+    background-color: $white;
+    &__img {
+        height: 250px;
+        background-image: url('https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+    }
+    &__bar {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+    }
+}

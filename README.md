@@ -11,7 +11,7 @@
 * [Contact](#contact)
 
 ## General info
-I made this project because I wanted to create a web application with Vue.js and Bootstrap that is nice in terms of design and code. The site is RWD
+I made this project because I wanted to create a web application with Vue.js and BootstrapVue that is nice in terms of design and code. The site is RWD
 
 ## Screenshots
 ![Home page](./screenshots/home.png)
@@ -21,6 +21,7 @@ I made this project because I wanted to create a web application with Vue.js and
 ## Technologies
 * Vue.js - version 2.6.10
 * Vue-router - version 3.0.3
+* BootstrapVue - version 2.0.0
 * Babel - version 7.0.0
 * Babel-jest - version 23.6.0
 * ESLint - version 5.16.0

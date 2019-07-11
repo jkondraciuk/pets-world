@@ -1,16 +1,43 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link>
-      <router-link :to="{ name : 'saved'}">Saved</router-link>
-      <router-link :to="{ name : 'about'}">About</router-link>
-    </div>
+    <Navbar />
     <router-view/>
   </div>
 </template>
 
 <script>
+import Navbar from '@/components/Navbar/Navbar';
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    Navbar
+  }
 }
 </script>
+<style lang="scss">
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+
+@import '@/assets/styles/colors.scss';
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+  }
+
+  html {
+    font-size: 62.5%;
+  }
+
+  body {
+    font-size: 1.6rem;
+    background-color: $grey-1 !important;
+  }
+
+  a {
+    color: $grey-6 !important;
+  }
+</style>
