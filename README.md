@@ -14,9 +14,9 @@
 I made this project because I wanted to create a web application with Vue.js and Bootstrap that is nice in terms of design and code. The site is RWD
 
 ## Screenshots
-![Example screenshot](./screenshots/home.png)
-![Example screenshot](./screenshots/saved.png)
-![Example screenshot](./screenshots/about.png)
+![Home page](./screenshots/home.png)
+![Saved page](./screenshots/saved.png)
+![About page](./screenshots/about.png)
 
 ## Technologies
 * Vue.js - version 2.6.10
@@ -27,32 +27,32 @@ I made this project because I wanted to create a web application with Vue.js and
 * Node-sass - version 4.9.0
 
 ## Setup
-*Setup of this project
+* Setup of this project
 ```
 npm install
 ```
 
-*Compiles and hot-reloads for development
+* Compiles and hot-reloads for development
 ```
 npm run serve
 ```
 
-*Compiles and minifies for production
+* Compiles and minifies for production
 ```
 npm run build
 ```
 
-*Run your tests
+* Run your tests
 ```
 npm run test
 ```
 
-*Lints and fixes files
+* Lints and fixes files
 ```
 npm run lint
 ```
 
-*Run your unit tests
+* Run your unit tests
 ```
 npm run test:unit
 ```
