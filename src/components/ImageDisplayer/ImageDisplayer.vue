@@ -1,6 +1,6 @@
 <template>
     <div class="imgd-wrapper">
-        <ImageType class="imgd-wrapper__type" />
+        <ImageType @changed-type="changeChoosenType" class="imgd-wrapper__type" />
         <div class="imgd">
             <div class="imgd__img"
                  :style="style"
@@ -11,22 +11,21 @@
                 <img :class="['imgd__icon', { 'imgd__icon--clicked' : saved }]"
                      src="@/assets/icons/heart.png"
                      alt="Heart icon"
-                     @click="saveImage">
+                     @click="addImage(image)">
                 <button class="btn btn-secondary imgd__button"
                         @click="loadImage">Next one</button>
             </div>
         </div>
-        <div style="font-size: 100px">{{ getText }}</div>
     </div>
 </template>
 
 <script>
-import axios from 'axios';
-import ImageType from '@/components/ImageType/ImageType';
+import axios from 'axios'
+import ImageType from '@/components/ImageType/ImageType'
 
-import { mapGetters } from 'vuex';
+import { mapActions } from 'vuex'
 
-const dogsAPI = 'https://dog.ceo/api/breeds/image/random';
+const dogsAPI = 'https://dog.ceo/api/breeds/image/random'
 
 export default {
     name: 'ImageDisplayer',
@@ -36,28 +35,37 @@ export default {
     data () {
         return {
             saved: false,
-            imageURL: null
+            choosenType: 0,
+            image: {
+                type: null,
+                url: null,
+                saveTime: null,
+                saveDate: null
+            }
         }
     },
     methods: {
         loadImage () {
             axios.get(dogsAPI)
-                .then(response => this.imageURL = response.data.message)
+                .then(response => this.image.url = response.data.message)
                 .catch(error => console.log(error))
-            this.saved = false;
+            this.saved = false
         },
         saveImage () {
-            this.saved = true;
-        }
+            this.saved = true
+        },
+        changeChoosenType (choosenType) {
+            this.choosenType = choosenType
+        },
+        ...mapActions(['addImage'])
     },
     computed: {
         style () {
-            return `background-image: url(${this.imageURL})`;
-        },
-        ...mapGetters(['getText'])
+            return `background-image: url(${this.image.url})`
+        }
     },
     mounted () {
-        this.loadImage();
+        this.loadImage()
     }
 }
 </script>

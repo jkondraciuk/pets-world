@@ -1,11 +1,14 @@
 <template>
     <div class="savedimages-wrapper">
         <SavedImage />
+        <img v-for="(img, index) in getSavedImages" :key="index" :src="img.url" />
     </div>
 </template>
 
 <script>
 import SavedImage from '@/components/SavedImage/SavedImage';
+
+import { mapGetters } from 'vuex';
 
 export default {
     name: 'SavedImages',
@@ -16,6 +19,9 @@ export default {
         return {
             savedImages: []
         }
+    },
+    computed: {
+        ...mapGetters(['getSavedImages'])
     }
 }
 </script>

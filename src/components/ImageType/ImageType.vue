@@ -27,6 +27,7 @@ export default {
     methods: {
         setChoosenType (index) {
             this.choosenType = index;
+            this.$emit('changed-type', this.choosenType);
         }
     }
 }
