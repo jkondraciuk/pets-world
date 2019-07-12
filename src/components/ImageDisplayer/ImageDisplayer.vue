@@ -39,7 +39,7 @@ export default {
             saved: false,
             choosenType: 0,
             image: {
-                type: null,
+                type: 'dog',
                 url: null,
                 saveTime: null,
                 saveDate: null
@@ -71,7 +71,17 @@ export default {
         },
         changeChoosenType (choosenType) {
             this.choosenType = choosenType
-            this.image.type = this.choosenType
+            switch (this.choosenType) {
+                case 0: {
+                    this.image.type = 'dog'
+                } break;
+                case 1: {
+                    this.image.type = 'cat'
+                } break;
+                case 2: {
+                    this.image.type = 'other'
+                } break;
+            }
             this.loadImage()
         },
         ...mapActions(['addImage'])
