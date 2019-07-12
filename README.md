@@ -22,7 +22,7 @@ I made this project because I wanted to create a web application with Vue.js and
 * Vue.js - version 2.6.10
 * Vue-router - version 3.0.3
 * Vuex - version 3.1.1
-* BootstrapVue - version 2.0.0
+* Bootstrap - version 4.3.1
 * Babel - version 7.0.0
 * Babel-jest - version 23.6.0
 * ESLint - version 5.16.0
