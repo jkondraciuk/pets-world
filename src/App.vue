@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <Navbar />
-    <router-view/>
+    <!-- <Navbar /> -->
+    <!-- <router-view/> -->
   </div>
 </template>
 
@@ -29,12 +29,7 @@ export default {
     font-weight: 300;
   }
 
-  html {
-    font-size: 62.5%;
-  }
-
   body {
-    font-size: 1.6rem;
     background-color: $grey-1 !important;
   }
 
