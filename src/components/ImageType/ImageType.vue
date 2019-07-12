@@ -5,6 +5,7 @@
                  v-for="(item, index) in imageTypes"
                  :key="index"
                  :class="['imagetype-wrapper__item', { 'imagetype-wrapper__item--choosen' : choosenType === index }]"
+                 :disabled="choosenType === index"
                  @click="setChoosenType(index)"
                  >{{ item }}</div>
         </div>
@@ -26,8 +27,10 @@ export default {
     },
     methods: {
         setChoosenType (index) {
-            this.choosenType = index;
-            this.$emit('changed-type', this.choosenType);
+            if (this.choosenType !== index) {
+                this.choosenType = index;
+                this.$emit('changed-type', this.choosenType);
+            }
         }
     }
 }

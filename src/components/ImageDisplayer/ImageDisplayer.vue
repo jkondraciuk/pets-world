@@ -26,6 +26,8 @@ import ImageType from '@/components/ImageType/ImageType'
 import { mapActions } from 'vuex'
 
 const dogsAPI = 'https://dog.ceo/api/breeds/image/random'
+const catsAPI = null
+const othersAPI = null
 
 export default {
     name: 'ImageDisplayer',
@@ -46,7 +48,20 @@ export default {
     },
     methods: {
         loadImage () {
-            axios.get(dogsAPI)
+            switch (this.choosenType) {
+                case 0: {
+                    this.fetchImage(dogsAPI);
+                } break;
+                case 1: {
+                    this.fetchImage(catsAPI);
+                } break;
+                case 2: {
+                    this.fetchImage(othersAPI);
+                } break;
+            }
+        },
+        fetchImage (usedAPI) {
+            axios.get(usedAPI)
                 .then(response => this.image.url = response.data.message)
                 .catch(error => console.log(error))
             this.saved = false
@@ -56,12 +71,17 @@ export default {
         },
         changeChoosenType (choosenType) {
             this.choosenType = choosenType
+            this.image.type = this.choosenType
+            this.loadImage()
         },
         ...mapActions(['addImage'])
     },
     computed: {
         style () {
             return `background-image: url(${this.image.url})`
+        },
+        imageType () {
+            return this.choosenType;
         }
     },
     mounted () {
