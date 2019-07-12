@@ -1,25 +1,33 @@
 <template>
   <div class="navbar-wrapper">
-    <b-navbar class="navbar-wrapper__navbar" toggleable="md" variant="transparent">
-      <b-navbar-brand class="logo" href="/">
+    <nav class="navbar navbar-expand-md navbar-light navbar-wrapper__navbar">
+      <a class="navbar-brand" href="/">
         <Logo />
-      </b-navbar-brand>
-      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+      </a>
+      <button class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarCollapsedContent"
+              aria-controls="navbarCollapsedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-      <b-collapse id="nav-collapse" is-nav>
-        <b-navbar-nav class="ml-auto navbar-wrapper__list">
-          <b-nav-item href="#">
-            <router-link class="navbar-wrapper__list-item px-md-3" to="/">Home</router-link>
-          </b-nav-item>
-          <b-nav-item href="#">
-            <router-link class="navbar-wrapper__list-item px-md-3" :to="{ name : 'saved'}">Saved</router-link>
-          </b-nav-item>
-          <b-nav-item href="#">
-            <router-link class="navbar-wrapper__list-item px-md-3" :to="{ name : 'about'}">About</router-link>
-          </b-nav-item>
-        </b-navbar-nav>
-      </b-collapse>
-    </b-navbar>
+      <div class="collapse navbar-collapse" id="navbarCollapsedContent">
+        <ul class="ml-auto navbar-nav">
+          <li class="nav-item">
+            <router-link class="nav-link navbar-wrapper__list-item px-md-3" to="/">Home</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link navbar-wrapper__list-item px-md-3" :to="{ name : 'saved'}">Saved</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link navbar-wrapper__list-item px-md-3" :to="{ name : 'about'}">About</router-link>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </div>
 </template>
 

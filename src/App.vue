@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <!-- <Navbar /> -->
+    <Navbar />
     <router-view/>
   </div>
 </template>
@@ -35,5 +35,8 @@ export default {
 
   a {
     color: $grey-6 !important;
+    &:hover {
+      text-decoration: underline !important;
+    }
   }
 </style>
