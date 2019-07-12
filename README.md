@@ -27,6 +27,7 @@ I made this project because I wanted to create a web application with Vue.js and
 * Babel-jest - version 23.6.0
 * ESLint - version 5.16.0
 * Node-sass - version 4.9.0
+* Axios - version 0.19.0
 
 ## Setup
 * Setup of this project
