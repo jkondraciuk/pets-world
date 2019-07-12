@@ -1,12 +1,13 @@
 <template>
     <div class="imagetype-wrapper">
-        <b-nav>
-            <b-nav-item v-for="(item, index) in imageTypes"
-                        :key="index"
-                        :class="['imagetype-wrapper__item', { 'imagetype-wrapper__item--choosen' : choosenType === index }]"
-                        @click="setChoosenType(index)"
-                        >{{ item }}</b-nav-item>
-        </b-nav>
+        <div class="nav">
+            <div class="nav-item px-1"
+                 v-for="(item, index) in imageTypes"
+                 :key="index"
+                 :class="['imagetype-wrapper__item', { 'imagetype-wrapper__item--choosen' : choosenType === index }]"
+                 @click="setChoosenType(index)"
+                 >{{ item }}</div>
+        </div>
     </div>
 </template>
 
