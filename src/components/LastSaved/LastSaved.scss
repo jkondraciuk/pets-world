@@ -21,10 +21,24 @@
 
 @include res(sm) {
     .lastsaved-wrapper {
-        height: 200px;
+        height: 165px;
         &__inner {
+            display: flex;
+            justify-content: center;
             height: 100%;
             margin: 0;
+            & > div {
+                max-width: 160px;
+            }
+        }
+    }
+}
+
+@include res(md) {
+    .lastsaved-wrapper {
+        height: 170px;
+        &__inner > div {
+            max-width: 170px;
         }
     }
 }

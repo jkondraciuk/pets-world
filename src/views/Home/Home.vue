@@ -3,7 +3,6 @@
         <ImageDisplayer />
         <LastSaved />
         <Footer />
-        <br><br><br>
     </div>
 </template>
 
