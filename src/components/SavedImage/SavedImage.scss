@@ -1,6 +1,7 @@
 .savedimage-wrapper {
     position: relative;
     width: 100%;
+    height: 100%;
     background-color: #aa55aa;
     &__image {
         width: 100%;
@@ -36,5 +37,13 @@
         padding: 10px;
         background-color: #000;
         cursor: pointer;
+    }
+}
+
+@include res(sm) {
+    .savedimage-wrapper {
+        &__image {
+            height: 100%;
+        }
     }
 }

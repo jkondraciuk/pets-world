@@ -1,10 +1,12 @@
 <template>
     <div class="lastsaved-wrapper">
-        <div class="container">
-        <div class="row">
-            <SavedImage />
-            <SavedImage />
-            <SavedImage />
+        <div class="container lastsaved-wrapper__container">
+        <div class="row no-gutters lastsaved-wrapper__row">
+            <div class="col-12 col-sm-4 lastsaved-wrapper__inner"
+                 v-for="(item, index) in lastSavedImages"
+                 :key="index">
+                <SavedImage />
+            </div>
         </div>
         </div>
     </div>
@@ -12,11 +14,15 @@
 
 <script>
 import SavedImage from '@/components/SavedImage/SavedImage';
+import { mapGetters } from 'vuex'
 
 export default {
     name: 'LastSaved',
     components: {
         SavedImage
+    },
+    computed: {
+        ...mapGetters(['lastSavedImages'])
     }
 }
 </script>

@@ -5,7 +5,8 @@ const state = {
 }
 
 const getters = {
-    getSavedImages: state => state.savedImages
+    getSavedImages: state => state.savedImages,
+    lastSavedImages: state => [state.savedImages[0], state.savedImages[1], state.savedImages[2]]
 }
 
 const actions = {
