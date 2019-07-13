@@ -6,6 +6,9 @@
         width: 100%;
         height: 200px;
         background-image: url('https://images.dog.ceo/breeds/malamute/n02110063_4432.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
     }
     &__bar {
         position: absolute;
