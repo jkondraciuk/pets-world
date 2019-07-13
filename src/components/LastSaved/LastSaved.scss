@@ -1,0 +1,13 @@
+.lastsaved-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 85vw;
+    margin: auto;
+    margin-top: 18px;
+    padding: 25px;
+    border: 1px solid $grey-4;
+    background-color: $white;
+    & > div {
+        margin-bottom: 20px;
+    }
+}
