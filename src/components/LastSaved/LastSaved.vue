@@ -1,8 +1,12 @@
 <template>
     <div class="lastsaved-wrapper">
-        <SavedImage />
-        <SavedImage />
-        <SavedImage />
+        <div class="container">
+        <div class="row">
+            <SavedImage />
+            <SavedImage />
+            <SavedImage />
+        </div>
+        </div>
     </div>
 </template>
 
