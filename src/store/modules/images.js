@@ -6,8 +6,7 @@ const state = {
 
 const getters = {
     getSavedImages: state => state.savedImages,
-    lastSavedImages: state => {
-        return state.savedImages.slice(0, 3);
+    lastSavedImages: state => state.savedImages.slice(0, 3)
     }
 }
 
