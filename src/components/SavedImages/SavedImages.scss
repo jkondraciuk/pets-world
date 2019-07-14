@@ -1,0 +1,40 @@
+.savedimages-wrapper {
+    &__container {
+        max-width: 302px;
+        padding: 25px;
+        border: 1px solid $grey-4;
+        background-color: $white;
+    }
+}
+
+@include res(sm) {
+    .savedimages-wrapper {
+        &__container {
+            max-width: 85vw;
+        }
+    }
+}
+
+@include res(md) {
+    .savedimages-wrapper {
+        &__container {
+            max-width: 680px;
+        }
+    }
+}
+
+@include res(lg) {
+    .savedimages-wrapper {
+        &__container {
+            max-width: 840px;
+        }
+    }
+}
+
+@include res(xl) {
+    .savedimages-wrapper {
+        &__container {
+            max-width: 880px;
+        }
+    }
+}

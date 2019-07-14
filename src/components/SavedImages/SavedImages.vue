@@ -1,8 +1,8 @@
 <template>
     <div class="savedimages-wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-sm-4"
+        <div class="container savedimages-wrapper__container">
+            <div class="row no-gutters">
+                <div class="col-12 col-sm-6 col-md-4"
                      v-for="(image, index) in getSavedImages" :key="index">
                      <SavedImage :image="image" />
                 </div>
