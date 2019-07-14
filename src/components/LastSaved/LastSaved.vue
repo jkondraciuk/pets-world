@@ -5,7 +5,7 @@
             <div class="col-12 col-sm-4 lastsaved-wrapper__inner"
                  v-for="(item, index) in lastSavedImages"
                  :key="index">
-                <SavedImage />
+                <SavedImage :image="lastSavedImages[index]" />
             </div>
         </div>
         </div>

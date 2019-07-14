@@ -1,6 +1,6 @@
 <template>
     <div class="savedimage-wrapper">
-        <div class="savedimage-wrapper__image" />
+        <div class="savedimage-wrapper__image" :style="style" />
         <div class="savedimage-wrapper__bar">
             <div class="savedimage-wrapper__data">
                 <span class="savedimage-wrapper__time">11:10</span>
@@ -15,7 +15,13 @@
 
 <script>
 export default {
-    name: 'SavedImage'
+    name: 'SavedImage',
+    props: ['image'],
+    computed: {
+        style () {
+            return `background-image: url(${this.image.url})`
+        }
+    }
 }
 </script>
 
