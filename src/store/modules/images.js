@@ -6,7 +6,9 @@ const state = {
 
 const getters = {
     getSavedImages: state => state.savedImages,
-    lastSavedImages: state => [state.savedImages[0], state.savedImages[1], state.savedImages[2]]
+    lastSavedImages: state => {
+        return state.savedImages.slice(0, 3);
+    }
 }
 
 const actions = {

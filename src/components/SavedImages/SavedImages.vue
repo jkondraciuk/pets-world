@@ -1,6 +1,5 @@
 <template>
     <div class="savedimages-wrapper">
-        <SavedImage />
         <img v-for="(img, index) in getSavedImages" :key="index" :src="img.url" />
     </div>
 </template>
