@@ -1,7 +1,7 @@
 <template>
     <div class="imagetype-wrapper">
         <div class="nav">
-            <div class="nav-item px-1"
+            <div class="nav-item mx-1"
                  v-for="(item, index) in imageTypes"
                  :key="index"
                  :class="['imagetype-wrapper__item', { 'imagetype-wrapper__item--choosen' : choosenType === index }]"
