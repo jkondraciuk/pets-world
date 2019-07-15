@@ -25,19 +25,27 @@
         justify-content: space-between;
         padding: 10px 5px;
     }
+    &__save {
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    }
     &__icon {
         width: 32px;
         cursor: pointer;
         transition: transform .2s ease-out;
         &--clicked {
             transform: scale(0.8);
+            cursor: default;
         }
     }
     &__saved {
         margin-left: 5px;
         font-size: 15px;
+        transform: translateY(-150%);
+        transition: transform .2s ease-out;
         &--clicked {
-            color: blue;
+            transform: translateY(0);
         }
     }
 }
