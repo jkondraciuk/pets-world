@@ -2,9 +2,15 @@
     <div class="savedimages-wrapper">
         <div class="container savedimages-wrapper__container">
             <div class="row no-gutters">
-                <div class="col-12 col-sm-6 col-md-4 savedimages-wrapper__noimages">
+                <div class="col-12 col-sm-6 col-md-4 savedimages-wrapper__noimages"
+                     v-show="noImages">
                     <p class="savedimages-wrapper__paragraph">You haven't saved any photos yet</p>
-                    <img src="@/assets/icons/add.svg" alt="Add icon">
+                    <div class="savedimages-wrapper__noimage-img">
+                        <router-link class="savedimages-wrapper__link" to="/">
+                        <img src="@/assets/icons/add.svg"
+                             alt="Add icon">
+                        </router-link>
+                    </div>
                 </div>
                 <div class="col-12 col-sm-6 col-md-4 savedimages-wrapper__image"
                      v-for="(image, index) in getSavedImages" :key="index">
@@ -25,13 +31,11 @@ export default {
     components: {
         SavedImage
     },
-    data () {
-        return {
-            savedImages: []
-        }
-    },
     computed: {
-        ...mapGetters(['getSavedImages'])
+        ...mapGetters(['getSavedImages']),
+        noImages () {
+            return this.getSavedImages.length === 0
+        }
     }
 }
 </script>

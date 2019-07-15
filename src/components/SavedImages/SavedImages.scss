@@ -16,10 +16,12 @@
         justify-content: center;
         align-items: center;
         height: 200px;
-        padding: 0 30px;
         border: 1px solid $grey-3;
         text-align: center;
         box-shadow: 2px 2px 5px $grey-1;
+    }
+    &__paragraph {
+        max-width: 185px;
     }
 }
 
