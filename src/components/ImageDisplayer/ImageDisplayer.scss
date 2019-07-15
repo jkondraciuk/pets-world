@@ -26,10 +26,18 @@
         padding: 10px 5px;
     }
     &__icon {
+        width: 32px;
         cursor: pointer;
-        transition: background-color .3s ease-out;
+        transition: transform .2s ease-out;
         &--clicked {
-            background-color: #e6465c;
+            transform: scale(0.8);
+        }
+    }
+    &__saved {
+        margin-left: 5px;
+        font-size: 15px;
+        &--clicked {
+            color: blue;
         }
     }
 }

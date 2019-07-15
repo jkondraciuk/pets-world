@@ -8,10 +8,13 @@
                  aria-label="An image of choosen type of animal"
                  title="An image of choosen type of animal" />
             <div class="imgd__bar">
-                <img :class="['imgd__icon', { 'imgd__icon--clicked' : saved }]"
-                     src="@/assets/icons/heart.png"
-                     alt="Heart icon"
-                     @click="addImage(image)">
+                <div class="imgd__save">
+                    <img :class="['imgd__icon', { 'imgd__icon--clicked' : saved }]"
+                        src="@/assets/icons/heart.svg"
+                        alt="Heart icon"
+                        @click="addImage(image)">
+                    <span :class="['imgd__saved', { 'imgd__saved--clicked' : saved }]">Saved!</span>
+                </div>
                 <button class="btn btn-secondary imgd__button"
                         @click="loadImage">Next one</button>
             </div>
