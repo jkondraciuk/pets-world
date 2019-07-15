@@ -11,12 +11,14 @@
         margin-bottom: 20px;
     }
     &__noimages {
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         height: 200px;
-        padding: 0 25px;
+        padding: 0 30px;
         border: 1px solid $grey-3;
+        text-align: center;
         box-shadow: 2px 2px 5px $grey-1;
     }
 }
