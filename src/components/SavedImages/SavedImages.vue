@@ -2,6 +2,9 @@
     <div class="savedimages-wrapper">
         <div class="container savedimages-wrapper__container">
             <div class="row no-gutters">
+                <div class="col-12 col-sm-6 col-md-4 savedimages-wrapper__noimages">
+                    <p class="savedimages-wrapper__paragraph">You haven't saved any photos yet</p>
+                </div>
                 <div class="col-12 col-sm-6 col-md-4 savedimages-wrapper__image"
                      v-for="(image, index) in getSavedImages" :key="index">
                      <SavedImage :image="image" />

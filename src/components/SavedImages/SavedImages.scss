@@ -1,6 +1,7 @@
 .savedimages-wrapper {
     &__container {
         max-width: 360px;
+        min-height: 70vh;
         margin-top: 15px;
         padding: 25px;
         border: 1px solid $grey-4;
@@ -8,6 +9,15 @@
     }
     &__image {
         margin-bottom: 20px;
+    }
+    &__noimages {
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        height: 200px;
+        padding: 0 25px;
+        border: 1px solid $grey-3;
+        box-shadow: 2px 2px 5px $grey-1;
     }
 }
 
