@@ -14,7 +14,7 @@
                     </div>
                     <span :class="['imgd__saved', { 'imgd__saved--clicked' : saved }]">Saved!</span>
                 </div>
-                <button class="btn btn-secondary imgd__button"
+                <button class="btn btn-primary btn-sm imgd__button"
                         @click="loadImage">Next one</button>
             </div>
         </div>
