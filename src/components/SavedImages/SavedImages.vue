@@ -14,7 +14,8 @@
                 </div>
                 <div class="col-12 col-sm-6 col-md-4 savedimages-wrapper__image"
                      v-for="(image, index) in getSavedImages" :key="index">
-                     <SavedImage :image="image" />
+                     <SavedImage :image="image"
+                                 @removeImage="removeImage(index)" />
                 </div>
             </div>
         </div>
@@ -24,7 +25,7 @@
 <script>
 import SavedImage from '@/components/SavedImage/SavedImage';
 
-import { mapGetters } from 'vuex';
+import { mapGetters, mapActions } from 'vuex';
 
 export default {
     name: 'SavedImages',
@@ -36,6 +37,9 @@ export default {
         noImages () {
             return this.getSavedImages.length === 0
         }
+    },
+    methods: {
+        ...mapActions(['removeImage'])
     }
 }
 </script>
