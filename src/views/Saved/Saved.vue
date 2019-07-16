@@ -10,7 +10,7 @@ import SavedImages from '@/components/SavedImages/SavedImages';
 export default {
     name: 'Saved',
     components: {
-        SavedImages
+        SavedImages,
     }
 }
 </script>

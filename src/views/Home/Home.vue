@@ -9,12 +9,12 @@
 <script>
 import ImageDisplayer from '@/components/ImageDisplayer/ImageDisplayer';
 import LastSaved from '@/components/LastSaved/LastSaved';
-import Footer from '@/components/Footer/Footer';
+import PageFooter from '@/components/PageFooter/PageFooter';
 
 export default {
     name: 'Home',
     components: {
-        Footer,
+        PageFooter,
         LastSaved,
         ImageDisplayer
     }
