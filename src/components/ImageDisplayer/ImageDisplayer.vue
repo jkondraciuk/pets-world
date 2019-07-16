@@ -9,13 +9,13 @@
                  title="An image of choosen type of animal" />
             <div class="imgd__bar">
                 <div class="imgd__save" >
-                    <div @click="addImage(image)">
-                        <HeartIcon :class="['imgd__heart-icon', { 'imgd__heart-icon--clicked' : saved }]" />
+                    <div @click="addImage(image); alreadySaved()">
+                        <HeartIcon :class="['imgd__heart-icon', { 'imgd__heart-icon--clicked' : isSaved }]" />
                     </div>
-                    <span :class="['imgd__saved', { 'imgd__saved--clicked' : saved }]">Saved!</span>
+                    <span :class="['imgd__saved', { 'imgd__saved--clicked' : isSaved }]">Saved!</span>
                 </div>
                 <button class="btn btn-primary btn-sm imgd__button"
-                        @click="loadImage">Next one</button>
+                        @click="loadImage(); unsaved()">Next one</button>
             </div>
         </div>
     </div>
@@ -26,7 +26,7 @@ import axios from 'axios'
 import ImageType from '@/components/ImageType/ImageType'
 import HeartIcon from '@/components/HeartIcon/HeartIcon'
 
-import { mapActions } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 
 const dogsAPI = 'https://dog.ceo/api/breeds/image/random'
 const catsAPI = null
@@ -40,7 +40,6 @@ export default {
     },
     data () {
         return {
-            saved: false,
             choosenType: 0,
             image: {
                 type: 'dog',
@@ -51,9 +50,6 @@ export default {
         }
     },
     methods: {
-        xd () {
-            console.log('123');
-        },
         loadImage () {
             switch (this.choosenType) {
                 case 0: {
@@ -73,9 +69,6 @@ export default {
                 .catch(error => console.log(error))
             this.saved = false
         },
-        saveImage () {
-            this.saved = true
-        },
         changeChoosenType (choosenType) {
             this.choosenType = choosenType
             switch (this.choosenType) {
@@ -91,7 +84,7 @@ export default {
             }
             this.loadImage()
         },
-        ...mapActions(['addImage'])
+        ...mapActions(['addImage', 'alreadySaved', 'unsaved'])
     },
     computed: {
         style () {
@@ -99,7 +92,8 @@ export default {
         },
         imageType () {
             return this.choosenType;
-        }
+        },
+        ...mapGetters (['isSaved'])
     },
     mounted () {
         this.loadImage()
