@@ -2,7 +2,7 @@
     <div class="home-wrapper">
         <ImageDisplayer />
         <LastSaved />
-        <Footer />
+        <PageFooter />
     </div>
 </template>
 
