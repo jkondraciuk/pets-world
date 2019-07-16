@@ -8,11 +8,10 @@
                  aria-label="An image of choosen type of animal"
                  title="An image of choosen type of animal" />
             <div class="imgd__bar">
-                <div class="imgd__save">
-                    <img :class="['imgd__icon', { 'imgd__icon--clicked' : saved }]"
-                        src="@/assets/icons/heart.svg"
-                        alt="Heart icon"
-                        @click="addImage(image)">
+                <div class="imgd__save" >
+                    <div @click="addImage(image)">
+                        <HeartIcon :class="['imgd__heart-icon', { 'imgd__heart-icon--clicked' : saved }]" />
+                    </div>
                     <span :class="['imgd__saved', { 'imgd__saved--clicked' : saved }]">Saved!</span>
                 </div>
                 <button class="btn btn-secondary imgd__button"
@@ -25,6 +24,7 @@
 <script>
 import axios from 'axios'
 import ImageType from '@/components/ImageType/ImageType'
+import HeartIcon from '@/components/HeartIcon/HeartIcon'
 
 import { mapActions } from 'vuex'
 
@@ -35,7 +35,8 @@ const othersAPI = null
 export default {
     name: 'ImageDisplayer',
     components: {
-        ImageType
+        ImageType,
+        HeartIcon
     },
     data () {
         return {
@@ -50,6 +51,9 @@ export default {
         }
     },
     methods: {
+        xd () {
+            console.log('123');
+        },
         loadImage () {
             switch (this.choosenType) {
                 case 0: {

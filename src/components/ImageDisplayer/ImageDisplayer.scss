@@ -30,22 +30,20 @@
         display: flex;
         align-items: center;
     }
-    &__icon {
-        width: 32px;
+    &__heart-icon {
         cursor: pointer;
-        transition: transform .2s ease-out;
         &--clicked {
-            transform: scale(0.8);
+            fill: #353530;
             cursor: default;
         }
     }
     &__saved {
-        margin-left: 5px;
+        margin-left: 7px;
         font-size: 15px;
         transform: translateY(-150%);
         transition: transform .2s ease-out;
         &--clicked {
-            transform: translateY(0);
+            transform: translateY(12%);
         }
     }
 }
