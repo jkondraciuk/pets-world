@@ -6,7 +6,8 @@
                 <span class="savedimage-wrapper__time">11:10</span>
                 <span class="savedimage-wrapper__date">12.14.2014</span>
             </div>
-            <div class="savedimage-wrapper__remove">
+            <div class="savedimage-wrapper__remove"
+                 @click="removeImage">
                 <img src="@/assets/icons/bin.svg" alt="A bin icon">
             </div>
         </div>
@@ -20,6 +21,11 @@ export default {
     computed: {
         style () {
             return `background-image: url(${this.image.url})`
+        }
+    },
+    methods: {
+        removeImage () {
+            this.$emit('removeImage')
         }
     }
 }

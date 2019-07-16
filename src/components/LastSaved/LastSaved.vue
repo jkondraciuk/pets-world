@@ -5,7 +5,9 @@
             <div class="col-12 col-sm-4 lastsaved-wrapper__inner"
                  v-for="(item, index) in lastSavedImages"
                  :key="index">
-                <SavedImage class="lastsaved-wrapper__image" :image="lastSavedImages[index]" />
+                <SavedImage class="lastsaved-wrapper__image"
+                            :image="lastSavedImages[index]"
+                            @removeImage="removeImage(index)" />
             </div>
         </div>
         </div>
@@ -14,7 +16,7 @@
 
 <script>
 import SavedImage from '@/components/SavedImage/SavedImage';
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
     name: 'LastSaved',
@@ -23,6 +25,9 @@ export default {
     },
     computed: {
         ...mapGetters(['lastSavedImages'])
+    },
+    methods: {
+        ...mapActions(['removeImage'])
     }
 }
 </script>

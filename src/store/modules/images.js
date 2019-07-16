@@ -22,6 +22,9 @@ const actions = {
         image.saveTime = `${hours}:${minutes}`
         image.saveDate = `${days}.${months}.${year}`
         commit('addImage', image)
+    },
+    removeImage ({ commit }, imageIndex) {
+        commit('removeImage', imageIndex)
     }
 }
 
@@ -33,6 +36,9 @@ const mutations = {
             saveTime: image.time,
             saveDate: image.date
         })
+    },
+    removeImage (state, imageIndex) {
+        state.savedImages.splice(imageIndex, 1)
     }
 }
 
