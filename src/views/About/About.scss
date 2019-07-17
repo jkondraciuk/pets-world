@@ -54,6 +54,7 @@
         }
         &__image {
             width: 40%;
+            max-width: 224px;
         }
         &__check {
             position: absolute;
@@ -69,6 +70,7 @@
         &__text {
             order: 2;
             width: 40%;
+            max-width: 224px;
             padding: 15px 0;
             font-size: 28px;
         }
@@ -84,6 +86,41 @@
         &__contact-item {
             margin-bottom: 2px;
             font-size: 14px;
+        }
+    }
+}
+
+@include res(md) {
+    .about {
+        &__header {
+            position: absolute;
+            left: 249px;
+            width: auto;
+            margin: 0;
+            margin-left: 15px;
+            padding-bottom: 0;
+            text-align: left;
+            font-size: 36px;
+        }
+        &__check {
+            top: 83px;
+            left: 249px;
+            max-width: none;
+            margin: 0;
+            margin-left: 15px;
+        }
+        &__contact {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            width: 60%;
+            margin: 0;
+            padding-left: 15px;
+            order: 1;
+        }
+        &__contact-item {
+            margin-bottom: 2px;
+            font-size: 17px;
         }
     }
 }
