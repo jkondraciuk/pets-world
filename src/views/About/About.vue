@@ -9,13 +9,19 @@
             <p class="about__text">Here's my portfolio with all the projects I made</p>
             <ul class="about__contact">
                 <li class="about__contact-item">
-                    <a href="" class="about__contact-link"></a>
+                    <p class="about__contact-paragraph">
+                        <a href="" class="about__contact-link"></a>
+                    </p>
                 </li>
                 <li class="about__contact-item">
-                    <a href="" class="about__contact-link"></a>
+                    <p class="about__contact-paragraph">
+                        <a href="" class="about__contact-link"></a>
+                    </p>
                 </li>
                 <li class="about__contact-item">
-                    <a href="" class="about__contact-link"></a>
+                    <p class="about__contact-paragraph">
+                        <a href="" class="about__contact-link"></a>
+                    </p>
                 </li>
             </ul>
         </div>
