@@ -10,17 +10,20 @@
             <ul class="about__contact">
                 <li class="about__contact-item">
                     <p class="about__contact-paragraph">
-                        <a href="" class="about__contact-link"></a>
+                        E-mail:
+                        <a href="" class="about__contact-link">kondraciuk.dev@gmail.com</a>
                     </p>
                 </li>
                 <li class="about__contact-item">
                     <p class="about__contact-paragraph">
-                        <a href="" class="about__contact-link"></a>
+                        Phone:
+                        <a href="" class="about__contact-link">576 035 485</a>
                     </p>
                 </li>
                 <li class="about__contact-item">
                     <p class="about__contact-paragraph">
-                        <a href="" class="about__contact-link"></a>
+                        Facebook:
+                        <a href="" class="about__contact-link">Kuba Kondraciuk</a>
                     </p>
                 </li>
             </ul>
