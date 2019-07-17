@@ -1,6 +1,24 @@
 <template>
     <div class="about-wrapper">
-        About
+        <div class="about__container">
+            <h1 class="about__header">Who made this page?</h1>
+            <div class="about__img">
+                <img src="" alt="Author">
+            </div>
+            <p class="about__check">Check @jkondraciuk on GitHub</p>
+            <p class="about__text">Here's my portfolio with all the projects I made</p>
+            <ul class="about__contact">
+                <li class="about__contact-item">
+                    <a href="" class="about__contact-link"></a>
+                </li>
+                <li class="about__contact-item">
+                    <a href="" class="about__contact-link"></a>
+                </li>
+                <li class="about__contact-item">
+                    <a href="" class="about__contact-link"></a>
+                </li>
+            </ul>
+        </div>
     </div>
 </template>
 
