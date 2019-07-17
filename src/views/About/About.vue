@@ -2,8 +2,8 @@
     <div class="about-wrapper">
         <div class="about__container">
             <h1 class="about__header">Who made this page?</h1>
-            <div class="about__img">
-                <img src="" alt="Author">
+            <div class="about__image">
+                <img class="about__image-img" src="@/assets/img/author.jpg" alt="Author">
             </div>
             <p class="about__check">Check @jkondraciuk on GitHub</p>
             <p class="about__text">Here's my portfolio with all the projects I made</p>

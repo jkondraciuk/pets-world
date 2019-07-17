@@ -11,6 +11,15 @@
         text-align: center;
         background-color: $white;
     }
+    &__header {
+        padding: 10px 0;
+    }
+    &__image {
+        border: 1px solid $grey-4;
+    }
+    &__image-img {
+        width: 100%;
+    }
     &__text {
         text-align: left;
         color: $grey-4;
@@ -22,6 +31,9 @@
         text-align: left;
     }
     &__contact-item {
-        margin-bottom: 12px;
+        margin-bottom: 8px;
+    }
+    &__contact-paragraph {
+        margin-bottom: 0;
     }
 }
