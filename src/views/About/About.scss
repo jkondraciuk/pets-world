@@ -1,0 +1,12 @@
+.about-wrapper {
+
+}
+
+.about {
+    &__container {
+        width: 85vw;
+        margin: auto;
+        border: 1px solid $grey-4;
+        background-color: $white;
+    }
+}
