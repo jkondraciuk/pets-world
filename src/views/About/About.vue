@@ -11,19 +11,19 @@
                 <li class="about__contact-item">
                     <p class="about__contact-paragraph">
                         E-mail:
-                        <a href="" class="about__contact-link">kondraciuk.dev@gmail.com</a>
+                        <a href="mailto:kondraciuk.dev@gmail.com" class="about__contact-link">kondraciuk.dev@gmail.com</a>
                     </p>
                 </li>
                 <li class="about__contact-item">
                     <p class="about__contact-paragraph">
                         Phone:
-                        <a href="" class="about__contact-link">576 035 485</a>
+                        <a href="tel: +48576035485" class="about__contact-link">576 035 485</a>
                     </p>
                 </li>
                 <li class="about__contact-item">
                     <p class="about__contact-paragraph">
                         Facebook:
-                        <a href="" class="about__contact-link">Kuba Kondraciuk</a>
+                        <a href="https://www.facebook.com/profile.php?id=100013474291989" target="_blank" class="about__contact-link">Kuba Kondraciuk</a>
                     </p>
                 </li>
             </ul>
