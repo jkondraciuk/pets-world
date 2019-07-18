@@ -15,7 +15,7 @@
                     <span :class="['imgd__saved', { 'imgd__saved--clicked' : isSaved }]">Saved!</span>
                 </div>
                 <button class="btn btn-primary btn-sm imgd__button"
-                        @click="loadImage(); unsaved()">Next one</button>
+                        @click="loadImage">Next one</button>
             </div>
         </div>
     </div>
@@ -29,7 +29,7 @@ import HeartIcon from '@/components/HeartIcon/HeartIcon'
 import { mapGetters, mapActions } from 'vuex'
 
 const dogsAPI = 'https://dog.ceo/api/breeds/image/random'
-const catsAPI = 'https://api.thecatapi.com/v1/images/search'
+const catsAPI = 'https://api.thecatapi.com/v1/images/search?mime_types=jpg,png'
 const othersAPI = null
 
 export default {
@@ -62,6 +62,7 @@ export default {
                     this.fetchImage(othersAPI);
                 } break;
             }
+            this.unsaved()
         },
         fetchImage (usedAPI) {
             // axios.get(usedAPI)
@@ -75,7 +76,7 @@ export default {
                 }
                 case 1: {
                     axios.get(usedAPI)
-                        .then(response => {this.image.url = response.data[0].url; console.log(response.data)})
+                        .then(response => this.image.url = response.data[0].url)
                         .catch(error => console.log(error))
                 }
             }
@@ -94,6 +95,7 @@ export default {
                 } break;
             }
             this.loadImage()
+            this.unsaved()
         },
         ...mapActions(['addImage', 'alreadySaved', 'unsaved'])
     },
