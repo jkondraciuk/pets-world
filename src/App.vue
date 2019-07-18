@@ -26,7 +26,7 @@ export default {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    font-weight: 300 !important;
+    font-weight: 300;
   }
 
   body {
