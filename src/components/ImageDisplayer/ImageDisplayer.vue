@@ -29,7 +29,7 @@ import HeartIcon from '@/components/HeartIcon/HeartIcon'
 import { mapGetters, mapActions } from 'vuex'
 
 const dogsAPI = 'https://dog.ceo/api/breeds/image/random'
-const catsAPI = null
+const catsAPI = 'https://api.thecatapi.com/v1/images/search'
 const othersAPI = null
 
 export default {
@@ -64,10 +64,21 @@ export default {
             }
         },
         fetchImage (usedAPI) {
-            axios.get(usedAPI)
-                .then(response => this.image.url = response.data.message)
-                .catch(error => console.log(error))
-            this.saved = false
+            // axios.get(usedAPI)
+            //     .then(response => this.image.url = response.data.message)
+            //     .catch(error => console.log(error))
+            switch (this.choosenType) {
+                case 0: {
+                    axios.get(usedAPI)
+                        .then(response => this.image.url = response.data.message)
+                        .catch(error => console.log(error))
+                }
+                case 1: {
+                    axios.get(usedAPI)
+                        .then(response => {this.image.url = response.data[0].url; console.log(response.data)})
+                        .catch(error => console.log(error))
+                }
+            }
         },
         changeChoosenType (choosenType) {
             this.choosenType = choosenType
