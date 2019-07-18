@@ -25,6 +25,7 @@
         display: flex;
         justify-content: space-between;
         padding: 12px 10px;
+        padding-bottom: 0;
     }
     &__save {
         overflow: hidden;
@@ -45,7 +46,7 @@
         transform: translateY(-150%);
         transition: transform .2s ease-out;
         &--clicked {
-            transform: translateY(12%);
+            transform: translateY(-10%);
         }
     }
 }

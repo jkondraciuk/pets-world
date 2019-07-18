@@ -1,5 +1,6 @@
 <template>
     <div class="lastsaved-wrapper">
+        <h2 class="lastsaved-wrapper__header">Last Saved:</h2>
         <div class="container lastsaved-wrapper__container">
         <div class="row no-gutters lastsaved-wrapper__row">
             <div class="col-12 col-sm-4 lastsaved-wrapper__inner"
