@@ -28,13 +28,19 @@
                 </li>
             </ul>
         </div>
+        <PageFooter class="about__footer" />
     </div>
 </template>
 
 <script>
+import PageFooter from '@/components/PageFooter/PageFooter'
+
 export default {
-    name: 'About'
+    name: 'About',
+    components: {
+        PageFooter
+    }
 }
 </script>
 
-<style src="./About.scss" lang="scss" scoped />>
+<style src="./About.scss" lang="scss" scoped />

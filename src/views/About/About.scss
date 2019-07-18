@@ -92,6 +92,12 @@
             margin-bottom: 2px;
             font-size: 14px;
         }
+        &__footer {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
 }
 

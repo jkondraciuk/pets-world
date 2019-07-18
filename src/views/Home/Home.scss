@@ -1,0 +1,14 @@
+.home-wrapper {
+    &__footer {
+        padding: 0;
+        padding: 25px 0;
+    }
+}
+
+@include res(sm) {
+    .home-wrapper {
+        &__footer {
+
+        }
+    }
+}
