@@ -18,7 +18,6 @@
                     v-for="(image, index) in getSavedImages"
                     :key="index"
                     v-show="showCorrectType(image.type)">
-                    {{ image.type }}
                     <SavedImage :image="image"
                                 @removeImage="removeImage(index)" />
                 </div>
