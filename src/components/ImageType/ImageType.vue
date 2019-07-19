@@ -21,7 +21,7 @@ export default {
             imageTypes: [
                 'dogs',
                 'cats',
-                'others'
+                'foxes'
             ]
         }
     },

@@ -30,7 +30,7 @@ import { mapGetters, mapActions } from 'vuex'
 
 const dogsAPI = 'https://dog.ceo/api/breeds/image/random'
 const catsAPI = 'https://api.thecatapi.com/v1/images/search?mime_types=jpg,png'
-const othersAPI = null
+const foxesAPI = null
 
 export default {
     name: 'ImageDisplayer',
@@ -59,7 +59,7 @@ export default {
                     this.fetchImage(catsAPI);
                 } break;
                 case 2: {
-                    this.fetchImage(othersAPI);
+                    this.fetchImage(foxesAPI);
                 } break;
             }
             this.unsaved()
@@ -91,7 +91,7 @@ export default {
                     this.image.type = 'cat'
                 } break;
                 case 2: {
-                    this.image.type = 'other'
+                    this.image.type = 'fox'
                 } break;
             }
             this.loadImage()
