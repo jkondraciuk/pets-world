@@ -53,8 +53,10 @@ export default {
         loadImage () {
             switch (this.choosenType) {
                 case 0: {
-                    this.choosenType = Math.floor(Math.random() * 3 + 1)
-                    this.loadImage()
+                    const randomType = Math.floor(Math.random() * 3 + 1)
+                    // this.loadImage()
+                    // this.choosenType = 0
+                    this.changeChoosenType(randomType)
                     this.choosenType = 0
                 } break;
                 case 1: {
@@ -94,13 +96,13 @@ export default {
         changeChoosenType (choosenType) {
             this.choosenType = choosenType
             switch (this.choosenType) {
-                case 0: {
+                case 1: {
                     this.image.type = 'dog'
                 } break;
-                case 1: {
+                case 2: {
                     this.image.type = 'cat'
                 } break;
-                case 2: {
+                case 3: {
                     this.image.type = 'fox'
                 } break;
             }
