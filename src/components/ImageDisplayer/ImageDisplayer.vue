@@ -53,12 +53,17 @@ export default {
         loadImage () {
             switch (this.choosenType) {
                 case 0: {
-                    this.fetchImage(dogsAPI);
+                    this.choosenType = Math.floor(Math.random() * 3 + 1)
+                    this.loadImage()
+                    this.choosenType = 0
                 } break;
                 case 1: {
-                    this.fetchImage(catsAPI);
+                    this.fetchImage(dogsAPI);
                 } break;
                 case 2: {
+                    this.fetchImage(catsAPI);
+                } break;
+                case 3: {
                     this.fetchImage(foxesAPI);
                 } break;
             }
@@ -69,17 +74,17 @@ export default {
             //     .then(response => this.image.url = response.data.message)
             //     .catch(error => console.log(error))
             switch (this.choosenType) {
-                case 0: {
+                case 1: {
                     axios.get(usedAPI)
                         .then(response => this.image.url = response.data.message)
                         .catch(error => console.log(error))
                 } break;
-                case 1: {
+                case 2: {
                     axios.get(usedAPI)
                         .then(response => this.image.url = response.data[0].url)
                         .catch(error => console.log(error))
                 } break;
-                case 2: {
+                case 3: {
                     axios.get(usedAPI)
                         .then(resposne => this.image.url = response.data.image)
                         .catch(error => console.log(error))

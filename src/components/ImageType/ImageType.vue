@@ -19,6 +19,7 @@ export default {
         return {
             choosenType: 0,
             imageTypes: [
+                'all',
                 'dogs',
                 'cats',
                 'foxes'
