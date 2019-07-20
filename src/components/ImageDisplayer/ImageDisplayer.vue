@@ -53,8 +53,6 @@ export default {
             switch (this.choosenType) {
                 case 0: {
                     const randomType = Math.floor(Math.random() * 2 + 1)
-                    // this.loadImage()
-                    // this.choosenType = 0
                     this.changeChoosenType(randomType)
                     this.choosenType = 0
                 } break;
@@ -68,9 +66,6 @@ export default {
             this.unsaved()
         },
         fetchImage (usedAPI) {
-            // axios.get(usedAPI)
-            //     .then(response => this.image.url = response.data.message)
-            //     .catch(error => console.log(error))
             switch (this.choosenType) {
                 case 1: {
                     axios.get(usedAPI)
