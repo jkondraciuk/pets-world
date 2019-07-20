@@ -30,7 +30,6 @@ import { mapGetters, mapActions } from 'vuex'
 
 const dogsAPI = 'https://dog.ceo/api/breeds/image/random'
 const catsAPI = 'https://api.thecatapi.com/v1/images/search?mime_types=jpg,png'
-const foxesAPI = 'https://randomfox.ca/floof/'
 
 export default {
     name: 'ImageDisplayer',
@@ -53,7 +52,7 @@ export default {
         loadImage () {
             switch (this.choosenType) {
                 case 0: {
-                    const randomType = Math.floor(Math.random() * 3 + 1)
+                    const randomType = Math.floor(Math.random() * 2 + 1)
                     // this.loadImage()
                     // this.choosenType = 0
                     this.changeChoosenType(randomType)
@@ -64,9 +63,6 @@ export default {
                 } break;
                 case 2: {
                     this.fetchImage(catsAPI);
-                } break;
-                case 3: {
-                    this.fetchImage(foxesAPI);
                 } break;
             }
             this.unsaved()
@@ -86,11 +82,6 @@ export default {
                         .then(response => this.image.url = response.data[0].url)
                         .catch(error => console.log(error))
                 } break;
-                case 3: {
-                    axios.get(usedAPI)
-                        .then(resposne => this.image.url = response.data.image)
-                        .catch(error => console.log(error))
-                } break;
             }
         },
         changeChoosenType (choosenType) {
@@ -101,9 +92,6 @@ export default {
                 } break;
                 case 2: {
                     this.image.type = 'cat'
-                } break;
-                case 3: {
-                    this.image.type = 'fox'
                 } break;
             }
             this.loadImage()
