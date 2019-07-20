@@ -1,5 +1,5 @@
 # PetsWorld
-> A web application where you can look at some animals: dogs, cats and others and save your favorite ones
+> A web application where you can look at some animals: dogs, cats and save your favorite ones
 
 ## Table of contents
 * [General info](#general-info)
