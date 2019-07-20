@@ -1,16 +1,13 @@
 .savedimages-wrapper {
     &__imagetype {
-        position: absolute;
-        width: 100%;
-        max-width: 360px;
-        top: 100px;
-        left: 50%;
-        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
     }
     &__container {
         max-width: 360px;
         min-height: 70vh;
         margin-top: 48px;
+        margin-top: 0;
         padding: 25px;
         border: 1px solid $grey-4;
         background-color: $white;
@@ -35,9 +32,6 @@
 
 @include res(sm) {
     .savedimages-wrapper {
-        &__imagetype {
-            max-width: 85vw;
-        }
         &__container {
             max-width: 85vw;
         }
@@ -50,7 +44,10 @@
 @include res(md) {
     .savedimages-wrapper {
         &__imagetype {
+            justify-content: flex-start;
             max-width: 90vw;
+            margin: auto;
+            padding-left: 10px;
         }
         &__container {
             max-width: 90vw;
@@ -62,6 +59,7 @@
     .savedimages-wrapper {
         &__imagetype {
             max-width: 840px;
+            padding-left: 15px;
         }
         &__container {
             max-width: 840px;
@@ -73,6 +71,7 @@
     .savedimages-wrapper {
         &__imagetype {
             max-width: 880px;
+            padding-left: 20px;
         }
         &__container {
             max-width: 880px;
