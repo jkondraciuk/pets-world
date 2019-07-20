@@ -21,8 +21,7 @@ export default {
             imageTypes: [
                 'all',
                 'dogs',
-                'cats',
-                'foxes'
+                'cats'
             ]
         }
     },
@@ -37,4 +36,4 @@ export default {
 }
 </script>
 
-<style src="./ImageType.scss" lang="scss" scoped />>
+<style src="./ImageType.scss" lang="scss" scoped />
