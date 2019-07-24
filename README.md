@@ -67,4 +67,4 @@ Project is: _in progress_
 The project was made entirely by myself, I wasn't inspired by any page or course
 
 ## Contact
-Created by [@jKondraciuk](https://jkondraciuk.github.io/portfolio/) - feel free to contact me!
+Created by [@jKondraciuk](https://jkondraciuk.github.io/portfolio) - feel free to contact me!
