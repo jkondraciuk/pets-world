@@ -34,17 +34,14 @@ I made this project because I wanted to create a web application with Vue.js and
 ```
 npm install
 ```
-
 * Compiles and hot-reloads for development
 ```
 npm run serve
 ```
-
 * Compiles and minifies for production
 ```
 npm run build
 ```
-
 * Run your tests
 ```
 npm run test
